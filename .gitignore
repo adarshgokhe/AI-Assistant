@@ -1,0 +1,19 @@
+# Ignore personal and system data files
+*.json
+*.txt
+!requirements.txt
+!README.md
+!*_README.txt
+!README_START_HERE.txt
+!UPGRADE_NOTES_READ_FIRST.txt
+
+# Ignore logs
+*.log
+Nova Maintenance Reports/
+Nova Maintenance Backups/
+
+# Ignore caches and environments
+__pycache__/
+.env
+.env.example
+.nova_speech_text.txt

@@ -1,0 +1,59 @@
+Nova AI Ultimate - upgraded fixed build
+
+What I changed without deleting your old features:
+1. Added Desktop Mic button in the GUI.
+   - Browser voice uses Chrome/Edge Web Speech and can show network errors.
+   - Desktop Mic uses Python SpeechRecognition/PyAudio from your laptop.
+
+2. Added safer security commands:
+   - security status
+   - secure my laptop
+   - quick scan laptop
+   - update defender
+   - enable firewall
+   - open vpn settings
+   - open privacy settings
+   - open windows update
+
+3. Added safer local GUI protection:
+   - Nova web GUI is still bound only to 127.0.0.1, not LAN/public internet.
+   - Added security headers to local web responses.
+   - Added max command length protection.
+   - Existing PIN lock support is kept. Use: set pin 1234
+
+4. Added better settings commands:
+   - turn on bluetooth / turn off bluetooth opens Bluetooth settings safely.
+   - turn on wifi / turn off wifi keeps existing behavior.
+   - open bluetooth settings, open wifi settings, open sound settings.
+
+5. Kept existing app behavior:
+   - WhatsApp stays desktop-first and will not open Google unless you clearly ask browser/web.
+   - Spotify uses spotify:search and tries to play first result.
+   - learn laptop / connect laptop still scans local apps.
+
+How to run:
+1. Open this folder in PowerShell.
+2. Run: python nova_ai_ultimate.py --web
+   OR double click START_HERE.cmd if it exists.
+3. In GUI click Chat Assistant or Voice Assistant.
+4. First commands to run:
+   connect laptop
+   assistant doctor
+   security status
+   test voice
+
+API keys:
+- Do not send your key to anyone.
+- Keep keys only in .env file.
+- Example names:
+  GEMINI_API_KEY=your_key_here
+  GROQ_API_KEY=your_key_here
+  OPENROUTER_API_KEY=your_key_here
+  OPENAI_API_KEY=your_key_here
+
+If voice bar still shows network issue:
+- Use the new Desktop Mic button.
+- Allow microphone permission in browser address bar.
+- Windows Settings > Privacy & security > Microphone > allow desktop apps.
+- Reinstall packages:
+  py -m pip install -r requirements.txt

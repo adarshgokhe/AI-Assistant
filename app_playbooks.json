@@ -1,0 +1,151 @@
+{
+    "spotify": {
+        "type": "desktop app",
+        "can_do": [
+            "Open Spotify Desktop",
+            "Search for a named song/artist/playlist",
+            "Try one safe Play click on the selected result",
+            "Use media keys for next, previous, pause, and resume"
+        ],
+        "commands": [
+            "open spotify",
+            "play jhol song in spotify",
+            "play song in spotify",
+            "next song",
+            "pause spotify"
+        ],
+        "limits": [
+            "Spotify has no reliable local public API without login/developer setup",
+            "Ads, login screens, layout changes, or device selection can block automation",
+            "Nova must not claim a song is playing unless it can verify it"
+        ],
+        "execution_rule": "If a song name is given, search then click one likely result. If no song name is given, open a playlist/current context and click Play only once."
+    },
+    "whatsapp": {
+        "type": "desktop app",
+        "can_do": [
+            "Open WhatsApp Desktop",
+            "Search/open a contact best-effort",
+            "Try message/call navigation best-effort"
+        ],
+        "commands": [
+            "open whatsapp",
+            "search Dishant in WhatsApp",
+            "call Dishant on WhatsApp",
+            "message Ritik hello in WhatsApp"
+        ],
+        "limits": [
+            "WhatsApp Desktop does not expose a guaranteed public call/message automation API",
+            "Login, permissions, layout changes, or contact ambiguity can block automation",
+            "Nova must never open Google for WhatsApp unless the user clearly asks for web/browser"
+        ],
+        "execution_rule": "Always try local WhatsApp Desktop first; report exactly what was attempted."
+    },
+    "youtube": {
+        "type": "website/PWA",
+        "can_do": [
+            "Open YouTube app/PWA if installed",
+            "Open YouTube search results",
+            "Open the first found video when Python web access can read results"
+        ],
+        "commands": [
+            "open youtube",
+            "search youtube python basics",
+            "play lo-fi music on youtube"
+        ],
+        "limits": [
+            "Browser autoplay may block playback",
+            "Nova cannot guarantee a video started unless it can inspect the player"
+        ],
+        "execution_rule": "Use YouTube only when the user says YouTube or asks web video playback."
+    },
+    "google": {
+        "type": "website",
+        "can_do": [
+            "Open Google search",
+            "Open Google services when permission is ON",
+            "Use online AI for answers when API is reachable"
+        ],
+        "commands": [
+            "search google laptop battery tips",
+            "open google drive",
+            "open google photos"
+        ],
+        "limits": [
+            "Search result pages are opened in browser; Nova does not silently click unknown results"
+        ],
+        "execution_rule": "Use Google search only for explicit search/google commands, not failed app-open commands."
+    },
+    "gmail": {
+        "type": "website",
+        "can_do": [
+            "Open Gmail",
+            "Open Gmail search",
+            "Open a compose draft with recipient/subject/body"
+        ],
+        "commands": [
+            "open gmail",
+            "search mail from college",
+            "compose email to name@example.com subject hello body hi"
+        ],
+        "limits": [
+            "Sending, deleting, archiving, or marking emails requires user review/final click"
+        ],
+        "execution_rule": "Never send or delete email automatically."
+    },
+    "windows_settings": {
+        "type": "Windows settings",
+        "can_do": [
+            "Open specific settings pages",
+            "Toggle some settings by supported safe APIs",
+            "Ask for UAC/admin when needed"
+        ],
+        "commands": [
+            "open bluetooth settings",
+            "turn off wifi",
+            "open display settings",
+            "volume down"
+        ],
+        "limits": [
+            "Some Windows toggles are blocked by design or need manual confirmation/UAC"
+        ],
+        "execution_rule": "Verify or say best-effort; never say done when Windows only opened a settings page."
+    },
+    "files": {
+        "type": "local files",
+        "can_do": [
+            "Create documents/code files",
+            "Analyze selected files",
+            "Open named files from common folders",
+            "Export chat"
+        ],
+        "commands": [
+            "make python file with date time code",
+            "analyze selected PDF",
+            "open research paper word file"
+        ],
+        "limits": [
+            "Nova scans common folders and its own workspace, not every private file on the whole disk by default"
+        ],
+        "execution_rule": "Use selected/uploaded file first, then known common folders; avoid guessing wrong files."
+    },
+    "media_studio": {
+        "type": "local photo/video tools",
+        "can_do": [
+            "Analyze images/videos",
+            "Create local prompt art",
+            "Crop/edit/merge selected media",
+            "Use FFmpeg for video"
+        ],
+        "commands": [
+            "analyze this photo",
+            "cinematic portrait keep same face",
+            "crop 9:16",
+            "merge selected photos"
+        ],
+        "limits": [
+            "Local edits are Pillow/FFmpeg drafts; true semantic image/video generation needs a connected AI model/API"
+        ],
+        "execution_rule": "Work only on selected files for GUI media tasks; never mix old latest files with selected files."
+    }
+}

@@ -1,0 +1,10 @@
+[2026-06-13 23:27:53] Laptop connected locally. I indexed 149 shortcuts, 176 Windows Start apps/PWAs, 185 installed programs, 1 drives, and common folders/settings. I will use this laptop profile before any web fallback. Startup learning scan completed. I learned how to route common apps/websites through local playbooks first: Spotify, WhatsApp, YouTube, Google/Gmail, Windows Settings, files, and Media Studio. I scanned app/settings capability metadata only; I did not read all private file contents.
+[2026-06-13 23:27:55] Starting Google Assistant style GUI at http://127.0.0.1:8765
+[2026-06-13 23:27:55] Nova: Nova Assistant GUI is ready.
+[2026-06-13 23:27:55] Web GUI: "GET / HTTP/1.1" 200 -
+[2026-06-13 23:27:55] Web GUI: "GET /api/network HTTP/1.1" 200 -
+[2026-06-13 23:27:55] Web GUI: "GET /api/history HTTP/1.1" 200 -
+[2026-06-13 23:27:55] Web GUI: "GET /api/feature_settings HTTP/1.1" 200 -
+[2026-06-13 23:27:56] Web GUI: "GET /api/status HTTP/1.1" 200 -
+[2026-06-13 23:27:56] Web GUI: "GET /favicon.ico HTTP/1.1" 404 -
+[2026-06-13 23:27:56] Web GUI: "GET /api/voices HTTP/1.1" 200 -

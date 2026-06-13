@@ -1,0 +1,12 @@
+python-dotenv
+requests
+pyttsx3
+SpeechRecognition
+PyAudio
+pyautogui
+pyperclip
+pygetwindow
+python-docx
+openpyxl
+python-pptx
+Pillow
